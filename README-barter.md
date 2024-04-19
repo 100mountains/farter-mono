@@ -4,6 +4,25 @@ The Barter library is structured to facilitate financial market data processing 
 
 * * *
 
+# Run the multi_stream_multi_exchange example
+cargo run --bin multi_stream_multi_exchange
+
+# Run the order_books_l1_streams example
+cargo run --bin order_books_l1_streams
+
+# Run the order_books_l1_streams_multi_exchange example
+cargo run --bin order_books_l1_streams_multi_exchange
+
+# Run the order_books_l2_streams example
+cargo run --bin order_books_l2_streams
+
+# Run the public_trades_streams example
+cargo run --bin public_trades_streams
+
+# Run the public_trades_streams_multi_exchange example
+cargo run --bin public_trades_streams_multi_exchange
+
+
 ### 1\. **MarketFeed**
 
 #### Description
