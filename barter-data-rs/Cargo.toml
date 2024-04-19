@@ -1,0 +1,75 @@
+[package]
+name = "barter-data"
+version = "0.7.0"
+authors = ["JustAStream"]
+edition = "2021"
+license = "MIT"
+documentation = "https://docs.rs/barter-data/"
+repository = "https://github.com/barter-rs/barter-data-rs"
+readme = "README.md"
+description = "High performance & normalised WebSocket intergration for leading cryptocurrency exchanges - batteries included."
+keywords = ["trading", "backtesting", "crypto", "stocks", "investment"]
+categories = ["accessibility", "simulation"]
+
+[dev-dependencies]
+tracing-subscriber = { version = "0.3.18", features = ["env-filter", "json"] }
+rust_decimal = "1.35.0"
+rust_decimal_macros = "1.34.2"
+
+[dependencies]
+barter-integration = { version = "0.5.3", path = "../barter-integration-rs" } # Barter Ecosystem
+barter-macro = "0.1.1"
+tracing-subscriber = "0.3.16"
+rust_decimal_macros = "1.34.2"
+rust_decimal = "1.35.0"
+
+# Logging
+tracing = "0.1.36"
+
+# Async
+tokio = { version = "1.20.1", features = ["sync", "macros", "rt-multi-thread"] }
+tokio-stream = { version = "0.1.9", features = ["sync"] }
+futures = "0.3.21"
+async-trait = "0.1.57"
+
+# Protocol
+url = "2.3.1"
+reqwest = "0.11.13"
+
+# Error
+thiserror = "1.0.32"
+
+# SerDe
+serde = { version = "1.0.143", features = ["derive"] }
+serde_json = "1.0.83"
+
+# Strategy
+ta = "0.5.0"
+
+# Misc
+chrono = { version = "0.4.21", features = ["serde"] }
+
+
+[[bin]]
+name = "multi_stream_multi_exchange"
+path = "examples/multi_stream_multi_exchange.rs"
+
+[[bin]]
+name = "order_books_l1_streams"
+path = "examples/order_books_l1_streams.rs"
+
+[[bin]]
+name = "order_books_l1_streams_multi_exchange"
+path = "examples/order_books_l1_streams_multi_exchange.rs"
+
+[[bin]]
+name = "order_books_l2_streams"
+path = "examples/order_books_l2_streams.rs"
+
+[[bin]]
+name = "public_trades_streams"
+path = "examples/public_trades_streams.rs"
+
+[[bin]]
+name = "public_trades_streams_multi_exchange"
+path = "examples/public_trades_streams_multi_exchange.rs"
