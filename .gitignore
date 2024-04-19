@@ -1,0 +1,14 @@
+# Ignore the work directory
+work/
+
+# Ignore the virtual environment directory
+myenv/
+
+__pycache__/
+target/
+doc/
+**/*.log
+.env
+.vscode
+.idea
+
